@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Audio/Keyboard-Button-Click-03-c-FesliyanStudios.com.mp3" type="AudioStream" id=1]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )

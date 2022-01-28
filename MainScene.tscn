@@ -1,0 +1,266 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://MainScene.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/MainMenu.cs" type="Script" id=2]
+[ext_resource path="res://img/icons8-javascript-48.png" type="Texture" id=3]
+[ext_resource path="res://img/icons8-c-sharp-logo-48.png" type="Texture" id=4]
+[ext_resource path="res://img/icons8-css3-48.png" type="Texture" id=5]
+[ext_resource path="res://img/icons8-html-5-48.png" type="Texture" id=6]
+[ext_resource path="res://img/icons8-txt-48.png" type="Texture" id=7]
+[ext_resource path="res://img/icons8-java-48.png" type="Texture" id=8]
+[ext_resource path="res://img/icons8-c++-48.png" type="Texture" id=9]
+[ext_resource path="res://TextFont.tres" type="DynamicFont" id=10]
+[ext_resource path="res://EditorFont.tres" type="DynamicFont" id=11]
+
+[node name="Canvas" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Editor = NodePath("VSplitContainer/TextEdit")
+Menu = NodePath("VSplitContainer/ColorRect/Menu")
+AcceptDialog = NodePath("AcceptDialog")
+MenuItems = NodePath("VSplitContainer/ColorRect/Menu/MenuItems")
+saveFileDialog = NodePath("SaveFileDialog")
+openFileDialog = NodePath("OpenFileDialog")
+FontSlider = NodePath("VSlider")
+FontFile = ExtResource( 11 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/member_variable_color = Color( 0.760784, 0.411765, 0.411765, 1 )
+custom_colors/safe_line_number_color = Color( 0, 0, 0, 1 )
+custom_colors/symbol_color = Color( 0.776471, 0.180392, 0.180392, 1 )
+custom_colors/caret_background_color = Color( 0.823529, 0.207843, 0.207843, 1 )
+custom_fonts/font = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+split_offset = 36
+dragger_visibility = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="VSplitContainer"]
+margin_right = 1024.0
+margin_bottom = 36.0
+color = Color( 0.219608, 0.788235, 0.560784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VSplitContainer/ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.0
+margin_top = -7.0
+margin_right = 27.0
+margin_bottom = 7.0
+text = "Notepad"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="VSplitContainer/ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_bottom = 1.0
+margin_right = 57.0
+custom_fonts/font = ExtResource( 1 )
+text = "..."
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuItems" type="PopupMenu" parent="VSplitContainer/ColorRect/Menu"]
+margin_right = 209.0
+margin_bottom = 170.0
+custom_fonts/font = ExtResource( 10 )
+items = [ "New", null, 0, false, false, 0, 0, null, "", false, "Load", null, 0, false, false, 1, 0, null, "", false, "Save", null, 0, false, false, 2, 0, null, "", false, "About", null, 0, false, false, 3, 0, null, "", false, "Exit", null, 0, false, false, 4, 0, null, "", false ]
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer"]
+margin_top = 36.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_colors/member_variable_color = Color( 0, 0.952941, 1, 1 )
+custom_colors/code_folding_color = Color( 0.341176, 0.717647, 0.901961, 1 )
+custom_colors/function_color = Color( 0.239216, 1, 0.215686, 1 )
+custom_colors/safe_line_number_color = Color( 0.992157, 1, 0.0980392, 1 )
+custom_colors/symbol_color = Color( 1, 1, 1, 1 )
+custom_colors/caret_background_color = Color( 0.886275, 0.494118, 0.952941, 1 )
+custom_colors/bookmark_color = Color( 1, 0, 0, 1 )
+custom_colors/selection_color = Color( 0.6, 0.305882, 0.0901961, 1 )
+custom_colors/caret_color = Color( 0.772549, 0.388235, 0.388235, 1 )
+custom_colors/font_color = Color( 0.960784, 0.694118, 0.054902, 1 )
+custom_colors/line_number_color = Color( 1, 1, 1, 1 )
+custom_colors/completion_font_color = Color( 0.443137, 0.345098, 0.247059, 1 )
+custom_colors/completion_scroll_color = Color( 1, 0, 0, 1 )
+custom_colors/background_color = Color( 0.0509804, 0.0352941, 0.345098, 1 )
+custom_colors/number_color = Color( 1, 1, 1, 1 )
+custom_colors/completion_background_color = Color( 1, 0.384314, 0.384314, 1 )
+custom_colors/brace_mismatch_color = Color( 0.992157, 0.513726, 0.513726, 1 )
+custom_colors/current_line_color = Color( 0.211765, 0.345098, 0.705882, 1 )
+custom_colors/completion_selected_color = Color( 0.403922, 0.796078, 0.309804, 1 )
+custom_colors/executing_line_color = Color( 0.309804, 0.356863, 0.611765, 1 )
+custom_colors/mark_color = Color( 0.611765, 0.501961, 0.207843, 1 )
+custom_colors/word_highlighted_color = Color( 0.607843, 0.341176, 0.643137, 1 )
+custom_colors/font_color_readonly = Color( 0.301961, 1, 0.156863, 1 )
+custom_colors/completion_existing_color = Color( 0.729412, 0.454902, 0.254902, 1 )
+custom_constants/line_spacing = 1
+custom_fonts/font = ExtResource( 11 )
+text = "using Godot;
+using System;
+
+public class MainMenu : Control
+{
+    [Export] public NodePath Editor;
+    [Export] public NodePath Menu = 1122;
+    [Export] public NodePath MenuItems;
+
+    public override void _Ready()
+    {
+    }
+
+    public void OnMenuButtonClicked()
+    {
+        var items = GetNode<PopupMenu>(MenuItems);
+        items.ShowOnTop = true;
+        items.Show();
+    }
+    //  // Called every frame. 'delta' is the elapsed time since the previous frame.
+    //  public override void _Process(float delta)
+    //  {
+    //      
+    //  }
+}
+"
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+draw_tabs = true
+draw_spaces = true
+bookmark_gutter = true
+fold_gutter = true
+smooth_scrolling = true
+minimap_draw = true
+minimap_width = 90
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveFileDialog" type="FileDialog" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+window_title = "Open a Directory"
+resizable = true
+mode = 2
+access = 2
+show_hidden_files = true
+current_dir = "/Users/Adeel/Documents/Godot/Notepad"
+current_path = "/Users/Adeel/Documents/Godot/Notepad/"
+
+[node name="OpenFileDialog" type="FileDialog" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+window_title = "Open a File"
+resizable = true
+mode = 0
+access = 2
+show_hidden_files = true
+current_dir = "/Users/Adeel/Documents/Godot/Notepad"
+current_path = "/Users/Adeel/Documents/Godot/Notepad/"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -246.0
+margin_top = -55.5
+margin_right = 246.0
+margin_bottom = 55.5
+window_title = "File Name"
+resizable = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="AcceptDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -36.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="AcceptDialog/Panel"]
+anchor_bottom = 1.0
+margin_right = 380.0
+custom_fonts/font = ExtResource( 10 )
+text = "Untitled"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Extensions" type="OptionButton" parent="AcceptDialog/Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -97.0
+text = ".cs"
+icon = ExtResource( 4 )
+items = [ ".cs", ExtResource( 4 ), false, 0, null, ".txt", ExtResource( 7 ), false, 1, null, ".html", ExtResource( 6 ), false, 2, null, ".css", ExtResource( 5 ), false, 3, null, ".js", ExtResource( 3 ), false, 4, null, ".jar", ExtResource( 8 ), false, 5, null, ".cpp", ExtResource( 9 ), false, 6, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider" type="VSlider" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -38.0
+margin_top = -201.0
+margin_right = -11.0
+margin_bottom = -8.0
+min_value = 8.0
+value = 8.0
+rounded = true
+tick_count = 2
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VSplitContainer/ColorRect/Menu" to="." method="OnMenuButtonClicked"]
+[connection signal="id_pressed" from="VSplitContainer/ColorRect/Menu/MenuItems" to="." method="on_MenuItems_id_pressed"]
+[connection signal="confirmed" from="SaveFileDialog" to="." method="SaveFileDialog_confirmed"]
+[connection signal="file_selected" from="OpenFileDialog" to="." method="FileDialog_file_selected"]
+[connection signal="confirmed" from="AcceptDialog" to="." method="OnAcceptDialog_confirmed"]
+[connection signal="mouse_entered" from="VSlider" to="." method="OnVSlider_mouse_entered"]
+[connection signal="mouse_exited" from="VSlider" to="." method="OnVSlider_mouse_leave"]
+[connection signal="value_changed" from="VSlider" to="." method="OnVSlider_value_changed"]

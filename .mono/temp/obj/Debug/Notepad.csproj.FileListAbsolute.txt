@@ -1,0 +1,9 @@
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\bin\Debug\Notepad.dll
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\bin\Debug\Notepad.pdb
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\obj\Debug\Notepad.csproj.AssemblyReference.cache
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\obj\Debug\Notepad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\obj\Debug\Notepad.AssemblyInfoInputs.cache
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\obj\Debug\Notepad.AssemblyInfo.cs
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\obj\Debug\Notepad.dll
+C:\Users\Adeel\Documents\Godot\Notepad\.mono\temp\obj\Debug\Notepad.pdb

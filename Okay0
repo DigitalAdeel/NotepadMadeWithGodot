@@ -1,0 +1,25 @@
+using Godot;
+using System;
+
+public class MainMenu : Control
+{
+    [Export] public NodePath Editor;
+    [Export] public NodePath Menu = 1122;
+    [Export] public NodePath MenuItems;
+
+    public override void _Ready()
+    {
+    }
+
+    public void OnMenuButtonClicked()
+    {
+        var items = GetNode<PopupMenu>(MenuItems);
+        items.ShowOnTop = true;
+        items.Show();
+    }
+    //  // Called every frame. 'delta' is the elapsed time since the previous frame.
+    //  public override void _Process(float delta)
+    //  {
+    //      
+    //  }
+}

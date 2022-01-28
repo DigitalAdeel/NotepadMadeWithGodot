@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
+} ]
+_global_script_class_icons={
+"GitAPI": ""
+}
+
+[application]
+
+config/name="Notepad"
+run/main_scene="res://MainScene.tscn"
+boot_splash/image="res://img/269968370_1281494072328101_1365360732117004663_n.png"
+boot_splash/bg_color=Color( 0.929412, 0.929412, 1, 1 )
+config/icon="res://icon.png"
+
+[display]
+
+window/size/borderless=true
+window/size/fullscreen=true
+window/vsync/use_vsync=false
+
+[gdnative]
+
+singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/COMType_Typewriter (ID 1065)_BSB.mp3-567bb0a2bcd805be22a332ebea62d228.mp3str"
+
+[deps]
+
+source_file="res://Audio/COMType_Typewriter (ID 1065)_BSB.mp3"
+dest_files=[ "res://.import/COMType_Typewriter (ID 1065)_BSB.mp3-567bb0a2bcd805be22a332ebea62d228.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
